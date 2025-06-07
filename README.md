@@ -1,25 +1,5 @@
-# 欢迎来到 Lean 的 LEDE 源码仓库
-
-为国产龙芯 LOONGSON SoC loongarch64 / 飞腾 Phytium 腾锐 D2000 系列架构添加支持
-
-I18N: [English](README_EN.md) | [简体中文](README.md) | [日本語](README_JA.md)
-
-## 官方讨论群
-
-如有技术问题需要讨论或者交流，欢迎加入以下群：
-
-1. QQ 讨论群：Op 固件技术研究群，号码 891659613，加群链接：[点击加入](https://qm.qq.com/q/IMa6Yf2SgC "Op固件技术研究群")
-2. TG 讨论群：OP 编译官方大群，加群链接：[点击加入](https://t.me/JhKgAA6Hx1 "OP 编译官方大群")
-
-## 软路由 ArmSoM Sige 系列介绍
-
-ArmSoM-Sige 系列：软路由、单板计算机、小型服务器与智能家居的全能之选。
-
-[商品介绍页面 - ArmSom 品牌店](https://shop518100695.taobao.com/)
-
-购买链接：
-
-[![sige1-zh](doc/sige-zh.jpg)](https://item.taobao.com/item.htm?id=721197662185)
+# 欢迎来到克隆 Lean 的 LEDE 源码仓库
+MTK MT798x 6.12内核固件源码
 
 ## 注意
 
@@ -164,15 +144,6 @@ PS > git clone https://github.com/coolsnowwolf/lede <your_local_lede_path>
 
 1. 源代码中绝不含任何后门和可以监控或者劫持你的 HTTPS 的闭源软件， SSL 安全是互联网最后的壁垒，安全干净才是固件应该做到的。
 
-2. 想学习 OpenWrt 开发，但是摸不着门道？自学没毅力？基础太差？怕太难学不会？跟着佐大学 OpenWrt 开发入门培训班助你能学有所成
-报名地址：[点击报名](http://forgotfun.org/2018/04/openwrt-training-2018.html "报名")
+2. QCA IPQ60xx 开源仓库地址：<https://github.com/coolsnowwolf/openwrt-gl-ax1800>
 
-3. QCA IPQ60xx 开源仓库地址：<https://github.com/coolsnowwolf/openwrt-gl-ax1800>
-
-4. 存档版本仓库地址：<https://github.com/coolsnowwolf/openwrt>
-
-## 捐贈
-
-如果你觉得此项目对你有帮助，可以捐助我们，以鼓励项目能持续发展，更加完善
-
- ![star](doc/star.png)
+3. 存档版本仓库地址：<https://github.com/coolsnowwolf/openwrt>

@@ -52,6 +52,7 @@ platform_do_upgrade() {
 	hf,m7986r1-emmc|\
 	huasifei,wh3000-emmc|\
 	huasifei,wh3000-pro|\
+        ikuai,q6000-emmc|\
 	jdcloud,re-cs-05)
 		CI_KERNPART="kernel"
 		CI_ROOTPART="rootfs"
@@ -111,6 +112,7 @@ platform_copy_config() {
 	hf,m7986r1-emmc|\
 	huasifei,wh3000-emmc|\
 	huasifei,wh3000-pro|\
+        ikuai,q6000-emmc|\
 	jdcloud,re-cs-05)
 		emmc_copy_config
 		;;

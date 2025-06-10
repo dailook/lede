@@ -151,27 +151,6 @@
 	};
 };
 
-&mdio {
-	switch: switch@1f {
-		compatible = "mediatek,mt7531";
-		reg = <31>;
-		reset-gpios = <&pio 5 GPIO_ACTIVE_HIGH>;
-		interrupt-controller;
-		#interrupt-cells = <1>;
-		interrupt-parent = <&pio>;
-		interrupts = <66 IRQ_TYPE_LEVEL_HIGH>;
-	};
-
-	phy7: phy@7 {
-		compatible = "ethernet-phy-ieee802.3-c45";
-		reg = <3>;
-		reset-assert-us = <100000>;
-		reset-deassert-us = <100000>;
-		reset-gpios = <&pio 6 GPIO_ACTIVE_LOW>;
-		realtek,aldps-enable;
-	};
-};
-
 &pio {
 	spi_flash_pins: spi-flash-pins-33-to-38 {
 		mux {

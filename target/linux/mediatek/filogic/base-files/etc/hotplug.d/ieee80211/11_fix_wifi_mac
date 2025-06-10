@@ -66,6 +66,16 @@ case "$board" in
 		addr=$(mtd_get_mac_binary Factory 0x04)
 		[ "$PHYNBR" = "1" ] && macaddr_add $addr 1 > /sys${DEVPATH}/macaddress
 		;;
+	ikuai,q6000)
+		addr=$(mtd_get_mac_binary Factory 0x0a)
+		[ "$PHYNBR" = "0" ] && echo "$addr" > /sys${DEVPATH}/macaddress
+		[ "$PHYNBR" = "1" ] && macaddr_setbit_la $(macaddr_add $addr 1) > /sys${DEVPATH}/macaddress
+		;;
+	ikuai,q6000-emmc)
+ 		addr=$(mmc_get_mac_binary factory 0x0a)
+ 		[ "$PHYNBR" = "0" ] && echo "$addr" > /sys${DEVPATH}/macaddress
+ 		[ "$PHYNBR" = "1" ] && macaddr_setbit_la $(macaddr_add $addr 1) > /sys${DEVPATH}/macaddress
+ 		;;
 	imou,lc-hx3001)
 		addr=$(mtd_get_mac_ascii u-boot-env mac)
 		[ "$PHYNBR" = "0" ] && macaddr_add $addr 1 > /sys${DEVPATH}/macaddress

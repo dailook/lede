@@ -42,12 +42,16 @@ imou,lc-hx3001)
 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x20000" "0x20000"
 	;;
 glinet,gl-mt2500|\
+ikuai,q6000-emmc|\
 glinet,gl-mt6000)
 	local envdev=$(find_mmc_part "u-boot-env")
 	ubootenv_add_uci_config "$envdev" "0x0" "0x80000"
 	;;
 glinet,gl-mt3000)
 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x80000" "0x20000"
+	;;
+ikuai,q6000)
+	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x80000" "0x80000"
 	;;
 openembed,som7981)
 	ubootenv_add_uci_config "/dev/mtd1" "0x0" "0x80000" "0x80000"

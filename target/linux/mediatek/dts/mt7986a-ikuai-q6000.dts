@@ -63,6 +63,10 @@
 	};
 };
 
+&crypto {
+	status = "okay";
+};
+
 &eth {
 	status = "okay";
 
@@ -87,6 +91,63 @@
 	mdio: mdio-bus {
 		#address-cells = <1>;
 		#size-cells = <0>;
+	};
+};
+
+
+&mdio {
+	switch: switch@1f {
+		compatible = "mediatek,mt7531";
+		reg = <31>;
+		reset-gpios = <&pio 5 GPIO_ACTIVE_HIGH>;
+		interrupt-controller;
+		#interrupt-cells = <1>;
+		interrupt-parent = <&pio>;
+		interrupts = <66 IRQ_TYPE_LEVEL_HIGH>;
+	};
+
+	phy7: phy@7 {
+		compatible = "ethernet-phy-ieee802.3-c45";
+		reg = <3>;
+		reset-assert-us = <100000>;
+		reset-deassert-us = <100000>;
+		reset-gpios = <&pio 6 GPIO_ACTIVE_LOW>;
+		realtek,aldps-enable;
+	};
+};
+
+&switch {
+	ports {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		port@2 {
+			reg = <2>;
+			label = "lan3";
+		};
+
+		port@3 {
+			reg = <3>;
+			label = "lan2";
+		};
+		
+		port@4 {
+		        reg = <4>;
+		        label = "lan1";
+		};
+
+		port@6 {
+			reg = <6>;
+			label = "cpu";
+			ethernet = <&gmac0>;
+			phy-mode = "2500base-x";
+
+			fixed-link {
+				speed = <2500>;
+				full-duplex;
+				pause;
+			};
+		};
 	};
 };
 
@@ -213,39 +274,8 @@
 	};
 };
 
-&switch {
-	ports {
-		#address-cells = <1>;
-		#size-cells = <0>;
-
-		port@2 {
-			reg = <2>;
-			label = "lan3";
-		};
-
-		port@3 {
-			reg = <3>;
-			label = "lan2";
-		};
-		
-		port@4 {
-		        reg = <4>;
-		        label = "lan1";
-		};
-
-		port@6 {
-			reg = <6>;
-			label = "cpu";
-			ethernet = <&gmac0>;
-			phy-mode = "2500base-x";
-
-			fixed-link {
-				speed = <2500>;
-				full-duplex;
-				pause;
-			};
-		};
-	};
+&trng {
+	status = "okay";
 };
 
 &wifi {

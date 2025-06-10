@@ -28,7 +28,7 @@ MTK MT798x 6.12内核固件源码
 3. 下载源代码，更新 feeds 并选择配置
 
    ```bash
-   git clone https://github.com/coolsnowwolf/lede
+   git clone https://github.com/dailook/lede.git
    cd lede
    ./scripts/feeds update -a
    ./scripts/feeds install -a

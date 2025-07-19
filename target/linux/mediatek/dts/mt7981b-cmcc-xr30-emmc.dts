@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-2.0-or-later OR MIT
 
 /dts-v1/;
-#include "mt7981b-cmcc-rax3000m.dts"
+#include "mt7981b-cmcc-xr30.dtsi"
 
 / {
-	model = "CMCC RAX3000M (eMMC version)";
-	compatible = "cmcc,rax3000m-emmc", "mediatek,mt7981";
+	model = "CMCC XR30 (eMMC version)";
+	compatible = "cmcc,xr30-emmc", "mediatek,mt7981";
 
 	chosen {
 		bootargs = "root=PARTLABEL=rootfs rootwait";
@@ -25,7 +25,7 @@
 &mmc0 {
 	bus-width = <8>;
 	cap-mmc-highspeed;
-	max-frequency = <26000000>;
+	max-frequency = <52000000>;
 	non-removable;
 	pinctrl-names = "default", "state_uhs";
 	pinctrl-0 = <&mmc0_pins_default>;

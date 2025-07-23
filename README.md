@@ -1,6 +1,16 @@
 # 欢迎来到克隆 Lean 的 LEDE 源码仓库
 MTK MT798x 6.12内核固件源码
 
+## 新一代 OpenWrt WIFI7 硬路由 CW Q3600 系列介绍
+
+畅网Wi-Fi7 ，如7而至（2.5G网口），双系统自由切换
+
+[商品介绍页面 - 畅网 品牌店](https://www.changwang.cn/products.html?typeid=149)
+
+购买链接：
+
+[![cw-zh](doc/cw-zh.jpg)](https://www.changwang.cn/product.html?id=29)
+
 ## 注意
 
 1. **不要用 root 用户进行编译**

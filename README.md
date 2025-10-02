@@ -9,7 +9,7 @@ MTK MT798x 6.12内核固件源码
 
 ## 编译命令
 
-1. 首先装好 Linux 系统，推荐 Debian 或 Ubuntu LTS
+1. 首先装好 Linux 系统，推荐 Debian 或 Ubuntu LTS 22/24
 
 2. 安装编译依赖
 
@@ -20,7 +20,7 @@ MTK MT798x 6.12内核固件源码
    bzip2 ccache clang cmake cpio curl device-tree-compiler flex gawk gcc-multilib g++-multilib gettext \
    genisoimage git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libfuse-dev libglib2.0-dev \
    libgmp3-dev libltdl-dev libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libpython3-dev \
-   libreadline-dev libssl-dev libtool llvm lrzsz msmtp ninja-build p7zip p7zip-full patch pkgconf \
+   libreadline-dev libssl-dev libtool llvm lrzsz libnsl-dev ninja-build p7zip p7zip-full patch pkgconf \
    python3 python3-pyelftools python3-setuptools qemu-utils rsync scons squashfs-tools subversion \
    swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
    ```

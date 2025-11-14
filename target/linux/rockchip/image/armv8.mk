@@ -524,6 +524,25 @@ define Device/radxa_rock-5b
 endef
 TARGET_DEVICES += radxa_rock-5b
 
+define Device/radxa_zero-3e
+  DEVICE_VENDOR := Radxa
+  DEVICE_MODEL := ZERO 3E
+  SOC := rk3566
+  UBOOT_DEVICE_NAME := evb-rk3566
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
+endef
+TARGET_DEVICES += radxa_zero-3e
+
+define Device/radxa_zero-3w
+  DEVICE_VENDOR := Radxa
+  DEVICE_MODEL := ZERO 3W
+  SOC := rk3566
+  UBOOT_DEVICE_NAME := evb-rk3566
+  DEVICE_PACKAGES := kmod-aic8800s wpad-openssl
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
+endef
+TARGET_DEVICES += radxa_zero-3w
+
 define Device/rocktech_mpc1903
   DEVICE_VENDOR := Rocktech
   DEVICE_MODEL := MPC1903

@@ -38,6 +38,19 @@ define U-Boot/evb-rk3528
   SOC:=rk3528
 endef
 
+define U-Boot/evb-rk3566
+  BUILD_SUBTARGET:=armv8
+  NAME:=RK3566 Evaluation
+  BUILD_DEVICES:= \
+    radxa_zero-3e \
+    radxa_zero-3w
+  DEPENDS:=+PACKAGE_u-boot-evb-rk3566:rkbin-rk3566
+  ATF:=rk3568_bl31_v1.44.elf
+  DDR:=rk3566_ddr_1056MHz_v1.23.bin
+  UBOOT_CONFIG:=rk3566
+  SOC:=rk3568
+endef
+
 define U-Boot/evb-rk3576
   BUILD_SUBTARGET:=armv8
   NAME:=RK3576 Evaluation
@@ -55,6 +68,7 @@ endef
 
 UBOOT_TARGETS := \
   evb-rk3528 \
+  evb-rk3566 \
   evb-rk3576
 
 UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes

@@ -524,6 +524,16 @@ define Device/radxa_rock-5b
 endef
 TARGET_DEVICES += radxa_rock-5b
 
+define Device/radxa_rock-5c
+  DEVICE_VENDOR := Radxa
+  DEVICE_MODEL := ROCK 5C/5C Lite
+  SOC := rk3588s
+  UBOOT_DEVICE_NAME := evb-rk3588
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script | pine64-img | gzip | append-metadata
+  DEVICE_PACKAGES := blkdiscard block-mount kmod-ata-ahci kmod-hwmon-pwmfan kmod-nvme kmod-r8168 kmod-r8125 kmod-hwmon-pwmfan kmod-aic8800u wpad-openssl
+endef
+TARGET_DEVICES += radxa_rock-5c
+
 define Device/radxa_zero-3e
   DEVICE_VENDOR := Radxa
   DEVICE_MODEL := ZERO 3E

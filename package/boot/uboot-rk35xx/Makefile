@@ -66,10 +66,23 @@ define U-Boot/evb-rk3576
   SOC:=rk3576
 endef
 
+define U-Boot/evb-rk3588
+  BUILD_SUBTARGET:=armv8
+  NAME:=RK3588 Evaluation
+  BUILD_DEVICES:= \
+    radxa_rock-5c
+  DEPENDS:=+PACKAGE_u-boot-evb-rk3588:rkbin-rk3588
+  ATF:=rk3588_bl31_v1.47.elf
+  DDR:=rk3588_ddr_lp4_2112MHz_lp5_2400MHz_v1.18.bin
+  UBOOT_CONFIG:=rk3588
+  SOC:=rk3588
+endef
+
 UBOOT_TARGETS := \
   evb-rk3528 \
   evb-rk3566 \
-  evb-rk3576
+  evb-rk3576 \
+  evb-rk3588
 
 UBOOT_CONFIGURE_VARS += USE_PRIVATE_LIBGCC=yes
 

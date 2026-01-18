@@ -209,6 +209,8 @@ define U-Boot/radxa-e20c-rk3528
   $(U-Boot/rk3528/Default)
   NAME:=Radxa E20C
   BUILD_DEVICES:= \
+    radxa_rock-2a \
+    radxa_rock-2f \
     radxa_e20c \
     radxa_e24c
 endef
@@ -234,6 +236,14 @@ define U-Boot/panther-x2-rk3566
   NAME:=Panther X2
   BUILD_DEVICES:= \
     panther_x2
+endef
+
+define U-Boot/radxa-zero-3-rk3566
+  $(U-Boot/rk3566/Default)
+  NAME:=ZERO 3E/3W
+  BUILD_DEVICES:= \
+    radxa_zero-3e \
+    radxa_zero-3w
 endef
 
 define U-Boot/rock-3c-rk3566
@@ -364,6 +374,13 @@ define U-Boot/generic-rk3576
     friendlyarm_nanopi-r76s
 endef
 
+define U-Boot/rock-4d-rk3576
+  $(U-Boot/rk3576/Default)
+  NAME:=ROCK 4D
+  BUILD_DEVICES:= \
+    radxa_rock-4d
+endef
+
 define U-Boot/sige5-rk3576
   $(U-Boot/rk3576/Default)
   NAME:=Sige5
@@ -418,7 +435,8 @@ define U-Boot/sige7-rk3588
   $(U-Boot/rk3588/Default)
   NAME:=Sige7
   BUILD_DEVICES:= \
-    armsom_sige7
+    armsom_sige7 \
+    armsom_w3
 endef
 
 # RK3588S boards
@@ -451,11 +469,19 @@ define U-Boot/rock5a-rk3588s
     radxa_rock-5a
 endef
 
+define U-Boot/rock-5c-rk3588s
+  $(U-Boot/rk3588/Default)
+  NAME:=ROCK 5C/5C Lite
+  BUILD_DEVICES:= \
+    radxa_rock-5c
+endef
+
 UBOOT_TARGETS := \
   generic-rk3528 \
   radxa-e20c-rk3528 \
   nanopi-r3s-rk3566 \
   panther-x2-rk3566 \
+  radxa-zero-3-rk3566 \
   rock-3c-rk3566 \
   bpi-r2-pro-rk3568 \
   generic-rk3568 \
@@ -470,6 +496,7 @@ UBOOT_TARGETS := \
   rock-3b-rk3568 \
   station-p2-rk3568 \
   generic-rk3576 \
+  rock-4d-rk3576 \
   sige5-rk3576 \
   generic-rk3588 \
   nanopc-t6-rk3588 \
@@ -480,6 +507,7 @@ UBOOT_TARGETS := \
   nanopi-r6s-rk3588s \
   orangepi-5-rk3588s \
   rock5a-rk3588s \
+  rock-5c-rk3588s \
   dlfr100-rk3399 \
   h3399pc-rk3399 \
   fine3399-rk3399 \
